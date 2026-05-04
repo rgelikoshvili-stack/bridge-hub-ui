@@ -2,12 +2,6 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import api from '../api/client';
 
-interface IntegrationStatus {
-  name: string;
-  status: 'connected' | 'disconnected' | 'error';
-  last_sync?: string;
-  details?: string;
-}
 
 const INTEGRATIONS = [
   { key: 'nbg', label: 'NBG (National Bank)', icon: '🏦', endpoint: '/currency/rates' },
