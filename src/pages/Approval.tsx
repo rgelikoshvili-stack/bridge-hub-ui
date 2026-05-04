@@ -97,7 +97,7 @@ function ConfBar({ value }: { value: number }) {
 
 function useToast() {
   const [toast, setToast] = useState<{ msg: string; type: string } | null>(null);
-  const timer = useRef<ReturnType<typeof setTimeout>>();
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const show = useCallback((msg: string, type = 'ok') => {
     setToast({ msg, type });
     clearTimeout(timer.current);
