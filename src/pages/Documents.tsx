@@ -65,7 +65,6 @@ function StatusBadge({ s }: { s: string }) {
 
 export default function Documents() {
   const [tab, setTab] = useState<'docs' | 'email'>('docs');
-  const [_uploading, setUploading] = useState(false);
   const [msg, setMsg] = useState('');
   const qc = useQueryClient();
 
