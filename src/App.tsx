@@ -18,6 +18,9 @@ import COA from './pages/COA';
 import Currency from './pages/Currency';
 import Settings from './pages/Settings';
 import Integrations from './pages/Integrations';
+import Bank from './pages/Bank';
+import Invoices from './pages/Invoices';
+import Expenses from './pages/Expenses';
 import './styles/globals.css';
 
 const qc = new QueryClient({
@@ -51,6 +54,9 @@ export default function App() {
               <Route path="vat"          element={<VAT />} />
               <Route path="coa"          element={<COA />} />
               <Route path="currency"     element={<Currency />} />
+              <Route path="bank"         element={<Bank />} />
+              <Route path="invoices"     element={<Invoices />} />
+              <Route path="expenses"     element={<Expenses />} />
               <Route path="settings"     element={<Settings />} />
               <Route path="integrations" element={<Integrations />} />
               <Route path="*"            element={<Navigate to="/app/dashboard" replace />} />

@@ -16,6 +16,9 @@ const NAV = [
   { label: 'Budget',           path: '/app/budget',     icon: '💰' },
   { label: 'VAT Declaration',  path: '/app/vat',        icon: '📋' },
   { label: 'Currency',         path: '/app/currency',   icon: '💱' },
+  { label: 'Bank Sync',        path: '/app/bank',       icon: '🏦' },
+  { label: 'Invoices',         path: '/app/invoices',   icon: '🧾' },
+  { label: 'Expenses',         path: '/app/expenses',   icon: '💳' },
   { label: 'Integrations',     path: '/app/integrations',icon: '🔗' },
   { label: 'Settings',         path: '/app/settings',   icon: '⚙' },
 ];

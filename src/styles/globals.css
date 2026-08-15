@@ -224,3 +224,86 @@ input, textarea, select { font-family: inherit; font-size: 14px; outline: none; 
   color: var(--ink-dim);
   margin-top: 4px;
 }
+.page__eyebrow {
+  font-size: 10.5px;
+  font-family: var(--mono);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-ghost);
+  margin-bottom: 4px;
+}
+
+/* ── KPI PILLS ROW ───────────────────────────── */
+.kpi-row-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.kpi-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: var(--paper-soft);
+  color: var(--ink-mute);
+  border: 1px solid var(--line);
+}
+.kpi-pill b { color: var(--ink); font-weight: 600; }
+.kpi-pill.a-green,  .kpi-pill--green  { background: var(--green-bg);  color: var(--green);  border-color: transparent; }
+.kpi-pill.a-green b,.kpi-pill--green b { color: var(--green); }
+.kpi-pill.a-amber,  .kpi-pill--amber  { background: var(--amber-bg);  color: var(--amber);  border-color: var(--amber-border); }
+.kpi-pill.a-amber b,.kpi-pill--amber b { color: var(--amber); }
+.kpi-pill.a-red,    .kpi-pill--red    { background: var(--red-bg);    color: var(--red);    border-color: transparent; }
+.kpi-pill.a-red b,  .kpi-pill--red b  { color: var(--red); }
+.kpi-pill.a-blue,   .kpi-pill--blue   { background: var(--blue-soft); color: var(--blue);   border-color: transparent; }
+.kpi-pill.a-blue b, .kpi-pill--blue b { color: var(--blue); }
+.kpi-pill.a-purple, .kpi-pill--purple { background: rgba(124,92,191,.1); color: #5a3d9a; border-color: transparent; }
+.kpi-pill.a-purple b,.kpi-pill--purple b { color: #5a3d9a; }
+
+/* ── CHIPS ───────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 10.5px;
+  font-family: var(--mono);
+  font-weight: 500;
+}
+.chip-draft    { background: var(--paper-sunk);  color: var(--ink-mute);  border: 1px solid var(--line); }
+.chip-pending  { background: var(--amber-bg);    color: var(--amber);     border: 1px solid var(--amber-border); }
+.chip-approved { background: var(--green-bg);    color: var(--green); }
+.chip-rejected { background: var(--red-bg);      color: var(--red); }
+
+/* ── TABLE HELPERS ───────────────────────────── */
+.td-desc {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── TOAST ────────────────────────────────────── */
+.a-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  z-index: 9999;
+  animation: fadeInUp .2s ease;
+}
+.a-toast--ok   { background: #27500A; color: #f0f9e8; }
+.a-toast--err  { background: #791F1F; color: #fde8e8; }
+.a-toast--warn { background: #7a4f00; color: #fef0d8; }
+.a-toast--info { background: var(--ink); color: var(--paper); }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
